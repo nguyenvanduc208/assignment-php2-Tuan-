@@ -1,54 +1,54 @@
-<footer>
-    <div class="pull-right">
-        Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-    </div>
-    <div class="clearfix"></div>
-</footer>
-<!-- /footer content -->
 </div>
-</div>  
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 3.2.0-rc
+    </div>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="public/vendors/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap -->
-<script src="public/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<!-- FastClick -->
-<script src="public/vendors/fastclick/lib/fastclick.js"></script>
-<!-- NProgress -->
-<script src="public/vendors/nprogress/nprogress.js"></script>
-<!-- Chart.js -->
-<script src="public/vendors/Chart.js/dist/Chart.min.js"></script>
-<!-- gauge.js -->
-<script src="public/vendors/gauge.js/dist/gauge.min.js"></script>
-<!-- bootstrap-progressbar -->
-<script src="public/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-<!-- iCheck -->
-<script src="public/vendors/iCheck/icheck.min.js"></script>
-<!-- Skycons -->
-<script src="public/vendors/skycons/skycons.js"></script>
-<!-- Flot -->
-<script src="public/vendors/Flot/jquery.flot.js"></script>
-<script src="public/vendors/Flot/jquery.flot.pie.js"></script>
-<script src="public/vendors/Flot/jquery.flot.time.js"></script>
-<script src="public/vendors/Flot/jquery.flot.stack.js"></script>
-<script src="public/vendors/Flot/jquery.flot.resize.js"></script>
-<!-- Flot plugins -->
-<script src="public/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-<script src="public/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-<script src="public/vendors/flot.curvedlines/curvedLines.js"></script>
-<!-- DateJS -->
-<script src="public/vendors/DateJS/build/date.js"></script>
+<script src="./public/plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="./public/plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="./public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="./public/plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="./public/plugins/sparklines/sparkline.js"></script>
 <!-- JQVMap -->
-<script src="public/vendors/jqvmap/dist/jquery.vmap.js"></script>
-<script src="public/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-<script src="public/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-<!-- bootstrap-daterangepicker -->
-<script src="public/vendors/moment/min/moment.min.js"></script>
-<script src="public/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-
-<!-- Custom Theme Scripts -->
-<script src="public/build/js/custom.min.js"></script>
-
+<script src="./public/plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="./public/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="./public/plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="./public/plugins/moment/moment.min.js"></script>
+<script src="./public/plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="./public/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="./public/plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="./public/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="./public/dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="./public/dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="./public/dist/js/pages/dashboard.js"></script>
 </body>
-
 </html>
