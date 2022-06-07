@@ -3,10 +3,7 @@ session_start();
 require_once './vendor/autoload.php';
 require_once './commons/db.php';
 require_once './commons/config.php';
-// về nhà cài đặt phần mềm composer vào máy tính của mình
-// https://getcomposer.org/download/
-use App\Controllers\HomeController;
-use App\Controllers\ProductController;
+use App\Controllers\Client\HomeController;
 use App\Controllers\Admin\ProductController as AdminProductController;
 use App\Controllers\Admin\CategoryController as AdminCategoryController;
 
@@ -14,6 +11,16 @@ use App\Controllers\Admin\CategoryController as AdminCategoryController;
 // $ctr->index();
 $url = !isset($_GET['url']) ? "/" : $_GET['url'];
 switch ($url) {
+    // ----------Client------------
+    case '/':
+        $ctr = new HomeController();
+        $ctr->index();
+        break;
+        case 'category':
+            $ctr = new HomeController();
+            $ctr->cate();
+            break;
+    //----------Admin------------
     case 'admin':
         $ctr = new AdminProductController();
         $ctr->index();
