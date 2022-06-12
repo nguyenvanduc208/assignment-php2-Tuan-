@@ -20,27 +20,62 @@ switch ($url) {
             $ctr = new HomeController();
             $ctr->cate();
             break;
+
+
+
     //----------Admin------------
     case 'admin':
-        $ctr = new AdminProductController();
+        $ctr = new AdminCategoryController();
         $ctr->index();
         break;
+
+
+
+    //------------------------------Category------------
     case 'admin/category':
         $ctr = new AdminCategoryController();
         $ctr->index();
         break;
+    case 'admin/category/add':
+        $ctr = new AdminCategoryController();
+        $ctr->add();
+        break;
+    case 'admin/category/edit':
+        $ctr = new AdminCategoryController();
+        $ctr->edit();
+        break;
+    case 'admin/category/save':
+        $ctr = new AdminCategoryController();
+        $ctr->save();
+        break;
+    case 'admin/category/delete':
+        $ctr = new AdminCategoryController();
+        $ctr->delete();
+        break;
+
+
+        
+    //------------------------------Product------------
     case 'admin/product':
         $ctr = new AdminProductController();
         $ctr->index();
         break;
-    // case 'admin':
-    //     $ctr = new AdminProductController();
-    //     $ctr->index();
-    //     break;
-    // case 'admin':
-    //     $ctr = new AdminProductController();
-    //     $ctr->index();
-    //     break;
+    case 'admin/product/add':
+        $ctr = new AdminProductController();
+        $ctr->add();
+        break;
+    case 'admin/product/edit':
+        $ctr = new AdminProductController();
+        $ctr->edit();
+        break;
+    case 'admin/product/save':
+        $ctr = new AdminProductController();
+        $ctr->save();
+        break;
+    case 'admin/product/delete':
+        $ctr = new AdminProductController();
+        $ctr->delete();
+        break;
     default:
         echo "Đường dẫn không tồn tại";
         break;

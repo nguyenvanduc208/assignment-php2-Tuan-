@@ -1,0 +1,5 @@
+<?php echo $this->runChild('admin.layout.head'); ?>
+<?php echo $this->runChild('admin.layout.header'); ?>
+<?php echo $this->runChild('admin.layout.sidebar'); ?>
+<?php echo $this->yieldContent('content'); ?>
+<?php echo $this->runChild('admin.layout.footer'); ?>

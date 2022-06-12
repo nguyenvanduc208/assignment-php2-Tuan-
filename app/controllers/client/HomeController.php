@@ -3,8 +3,9 @@ namespace App\Controllers\Client;
 use App\Models\User;
 use App\Models\Product;
 use App\Models\Category;
+use App\Controllers\BaseController;
 
-class HomeController{
+class HomeController extends BaseController{
     public function __construct(){
         $cate = Category::all();
         $_SESSION['category'] = $cate;
@@ -21,6 +22,11 @@ class HomeController{
         $name = Category::find($id)->name;
         $title = $name;
         include_once './app/views/client/home.php';
+    }
+
+    public function test(){
+        $test = 'Nguyen Van Duc';
+        return $this->render('test',compact('test'));
     }
 
 }

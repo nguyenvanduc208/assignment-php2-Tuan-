@@ -1,11 +1,5 @@
-<?php
-include_once './app/views/admin/layout/head.php';
-include_once './app/views/admin/layout/header.php';
-include_once './app/views/admin/layout/sidebar.php';
-
-?>
-
-
+@extends('admin.layout.main-layout')
+@section('content')
 <!-- Main content -->
 <section class="content">
   <div class="container-fluid">
@@ -20,7 +14,7 @@ include_once './app/views/admin/layout/sidebar.php';
                 <th>Giá</th>
                 <th>Danh mục</th>
                 <th style="width:120px">Hình ảnh</th>
-                <th style="width: 60px"></th>
+                <th style="width: 60px"><a href="{{ADMIN_URL}}product/add" class="btn btn-info">Tạo mới</a></th>
               </tr>
             </thead>
             <tbody>
@@ -36,10 +30,10 @@ include_once './app/views/admin/layout/sidebar.php';
                           echo $item->name;
                         }
                       } ?></td>
-                  <td><img src="<?= $row->image ?>" alt="" width="120px"></td>
+                  <td><img src="{{strpos($row->image,'://') == false ? BASE_URL . $row->image :  $row->image}}" alt="" width="120px"></td>
                   <td>
-                    <a href="" class="btn btn-primary">Sửa</a>
-                    <a href="" class="btn btn-danger ">Xóa</a>
+                    <a href="{{ ADMIN_URL . "product/edit?id=$row->id" }}" class="btn btn-primary">Sửa</a>
+                    <a href="{{ ADMIN_URL . "product/delete?id=$row->id" }}" onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này ?');" class="btn btn-danger ">Xóa</a>
                   </td>
                 </tr>
               <?php  } ?>
@@ -61,9 +55,8 @@ include_once './app/views/admin/layout/sidebar.php';
   </div>
   </div><!-- /.container-fluid -->
 </section>
-<?php
-include_once './app/views/admin/layout/footer.php';
+@endsection
 
 
 
-?>
+
